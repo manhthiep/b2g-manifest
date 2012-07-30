@@ -9,8 +9,13 @@
           fetch="git://github.com/mozilla-b2g/" />
   <remote name="mozilla"
 	  fetch="git://github.com/mozilla/" />
+  <remote name="Evervolv"
+           fetch="git://github.com/Evervolv/"
+	   review="review.evervolv.com" />
+  <remote name="manhthiep"
+           fetch="git://github.com/manhthiep/" />
   <default revision="refs/tags/android-4.0.4_r2.1"
-           remote="linaro"
+           remote="aosp"
            sync-j="4" />
 
   <!-- Gonk specific things and forks -->
@@ -30,7 +35,7 @@
   <project path="bionic" name="platform/bionic" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
   <project path="device/common" name="device/common" />
-  <project path="device/sample" name="device/sample" />
+  <!-- <project path="device/sample" name="device/sample" /> -->
   <project path="external/apache-http" name="platform/external/apache-http" />
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
   <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
@@ -73,16 +78,20 @@
   <project path="external/tinyalsa" name="platform/external/tinyalsa" />
   <project path="external/tremolo" name="platform/external/tremolo" />
   <project path="external/webp" name="platform/external/webp" />
-  <project path="external/webrtc" name="platform/external/webrtc" />
+  <!-- <project path="external/webrtc" name="platform/external/webrtc" /> -->
+  <project path="external/webrtc" name="android_external_webrtc" remote="Evervolv" revision="ics" />
   <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
   <project path="external/zlib" name="platform/external/zlib" />
   <project path="external/yaffs2" name="platform/external/yaffs2" />
-  <project path="frameworks/base" name="platform/frameworks/base" revision="612ca9c6a55bd932c45f5b85ae932a1b712dd914" />
+  <!-- <project path="frameworks/base" name="platform/frameworks/base" revision="612ca9c6a55bd932c45f5b85ae932a1b712dd914" /> -->
+  <project path="frameworks/base" name="android_frameworks_base" remote="manhthiep" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="frameworks/support" name="platform/frameworks/support" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" revision="af9565aa8be0136463ec549d9d3abdd906d2c390" />
+  <!-- <project path="hardware/libhardware" name="platform/hardware/libhardware" /> -->
+  <!-- <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" revision="af9565aa8be0136463ec549d9d3abdd906d2c390" /> -->
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="manhthiep" revision="ics" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="manhthiep" revision="ics" />
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
   <project path="prebuilt" name="platform/prebuilt" revision="master" />
@@ -101,5 +110,22 @@
   <project path="prebuilts/tools" name="platform/prebuilts/tools" revision="master" />
   <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" revision="master" />
   <project path="sdk" name="platform/sdk" revision="0d8f973905a4925e00eb9e32887c192b2148b29f" />
+
+  <!-- HTC HD2 (Leo) specific things -->
+  <project path="device/htc/common" name="android_device_htc_common" remote="Evervolv" revision="ics" />
+  <project path="device/htc/leo" name="android_device_htc_leo" remote="manhthiep" revision="ics" />
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
+  <project path="hardware/invensense" name="platform/hardware/invensense" />
+  <project path="hardware/msm7k" name="android_hardware_msm7k" remote="manhthiep" revision="ics" />
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="manhthiep" revision="ics" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="manhthiep" revision="ics" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="manhthiep" revision="ics" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="manhthiep" revision="ics" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="manhthiep" revision="ics" />  
+  <project path="vendor/htc/leo" name="android_vendor_htc_leo" remote="manhthiep" revision="ics" />
+  <project path="vendor/qcom/opensource/kernel-tests/mm-audio" name="android_vendor_qcom_opensource_kernel-tests_mm-audio" remote="Evervolv" revision="ics" />
+  <project path="vendor/qcom/opensource/omx/mm-core" name="android_vendor_qcom_opensource_omx_mm-core" remote="Evervolv" revision="ics" />
+  <project path="vendor/qcom/opensource/omx/mm-video" name="android_vendor_qcom_opensource_omx_mm-video" remote="Evervolv" revision="ics" />
+  <project path="vendor/qcom/opensource/v8" name="android_vendor_qcom_opensource_v8" remote="Evervolv" revision="ics" />
 
 </manifest>
