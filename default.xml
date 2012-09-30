@@ -24,7 +24,7 @@
   </project>
   <project path="dalvik" name="fake-dalvik" remote="b2g" revision="master" />
   <project path="gaia" name="gaia" remote="b2g" revision="master" />
-  <project path="gecko" name="mozilla-central" remote="mozilla" revision="master" />
+  <project path="gecko" name="releases-mozilla-central" remote="mozilla" revision="master" />
   <project path="gonk-misc" name="gonk-misc" remote="b2g" revision="master" />
   <project path="rilproxy" name="rilproxy" remote="b2g" revision="master" />
   <project path="hardware/ril" name="platform_hardware_ril" remote="b2g" revision="master"/>
@@ -68,6 +68,7 @@
   <project path="external/openssl" name="platform/external/openssl" />
   <project path="external/protobuf" name="platform/external/protobuf" />
   <project path="external/safe-iop" name="platform/external/safe-iop" />
+  <project path="external/screencap-gonk" name="screencap-gonk" remote="b2g" revision="master" />
   <project path="external/skia" name="platform/external/skia" revision="8c1c7cfacd82a174c65fcbf839d7037e3692aee8" />
   <project path="external/sonivox" name="platform/external/sonivox" />
   <project path="external/speex" name="platform/external/speex" />
